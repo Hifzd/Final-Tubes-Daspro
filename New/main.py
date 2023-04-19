@@ -19,3 +19,4 @@ while isFoldr_exist:
     else:
         commands.run(masukan)
         print()
+        print(global_dat.candi)

@@ -3,6 +3,7 @@ import F02
 import F03
 import F04
 import F05
+import F06
 import global_dat
 
 def run(masukan):
