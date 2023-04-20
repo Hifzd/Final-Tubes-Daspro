@@ -1,20 +1,23 @@
 import os
 import global_dat
+from primitives import pjglist
 
 def listToString(lis, delimiter):
     newstr = ''
-    for i in range(len(lis)):
+    for i in range(pjglist(lis)):
         newstr += str(lis[i])
-        if i != len(lis)-1:
+        if i != pjglist(lis)-1:
             newstr += delimiter
     return newstr
 
 def saveMatriks(matriks, filename, folder):
     f = open(f'{folder}/{filename}.csv', mode='w')
 
-    for i in matriks:
-        newline = listToString(i, ';')
-        f.write(newline + '\n')
+    for i in range(pjglist(matriks)):
+        newline = listToString(matriks[i], ';')
+        f.write(newline)
+        if i != pjglist(matriks) - 1:
+            f.write('\n')
     
     f.close()
 
