@@ -75,3 +75,25 @@ def popp(lis,value):
             newlis[j] = lis[i]
             j+=1
     return newlis
+
+def idfind(lis):
+    for i in range(len(lis)):
+        if i != 0:
+            if int(lis[i][0]) > i:
+                break
+    else:
+        # executed if the loop completes without a break statement
+        return len(lis)
+    return i
+    
+def insert(lis, value, ind):
+    newlis = []
+    inserted = False
+    for i in range(len(lis)):
+        if i == ind:
+            newlis = konso(newlis, value)
+            inserted = True
+        newlis = konso(newlis, lis[i])
+    if not inserted:
+        newlis = konso(newlis, value)
+    return newlis
