@@ -5,6 +5,8 @@ import F04
 import F05
 import F06
 import F07
+import F08
+import F09
 import global_dat
 
 def run(masukan):
@@ -34,7 +36,7 @@ def run(masukan):
 
     elif masukan == 'bangun':
         if global_dat.current_user[2] == 'jin_pembangun':
-            F06.bangun()
+            F06.bangun('single', global_dat.current_user[0],'')
         else:
             print('Hanya jin pembangun yang bisa membangun candi')
 
@@ -43,3 +45,18 @@ def run(masukan):
             F07.kumpul()
         else:
             print('Hanya jin pembangun yang bisa membangun candi')
+
+    elif masukan == 'batchbangun' or masukan == 'batchkumpul':
+        if global_dat.current_user[2] == 'bandung_bondowoso':
+            if masukan == 'batchkumpul':
+                F08.batchkumpul()
+            else:
+                F08.batchbangun()
+        else:
+            print('Hanya sang Bondowoso yang bisa mengerahkan seluruh jin pengumpul/pembangun!')
+    
+    elif masukan == 'laporanjin':
+        if global_dat.current_user[2] == 'bandung_bondowoso':
+            F09.laporanjin()
+        else:
+            print('Laporan jin hanya dapat diakses oleh akun Bandung Bondowoso.')

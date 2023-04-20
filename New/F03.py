@@ -3,9 +3,9 @@ import global_dat
 
 def jinless100(users, golongan):
     count = hitungjin(users, golongan)
-    if count <= 6:
+    if count <= 100:
         return True
-    elif count > 6:
+    elif count > 100:
         print('Jumlah Jin telah maksimal! (100 jin). Bandung tidak dapat men-summon lebih dari itu')
         return False
 

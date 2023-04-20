@@ -19,4 +19,4 @@ while isFoldr_exist:
     else:
         commands.run(masukan)
         print()
-        print(global_dat.bahan_bangunan)
+        print(global_dat.candi)
