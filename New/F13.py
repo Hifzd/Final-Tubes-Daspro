@@ -3,7 +3,8 @@ import os
 import global_dat
 
 def valid(folder):
-    if os.path.isdir(folder):
+    save_folder = 'save'
+    if os.path.isdir(os.path.join(save_folder,folder)) and folder != '':
         print('''Loading...
 
 Selamat datang di program “Manajerial Candi”
@@ -20,7 +21,10 @@ Usage: python main.py <nama_folder>''')
         return False
 
 def load(folder, csv):
-    dat = open(f'{folder}/{csv}', 'r')
+    save_folder = 'save'
+    path = os.path.join(save_folder, folder)
+    file_path = os.path.join(path, str(csv))
+    dat = open(f'{file_path}', 'r')
     matrix = splitter(dat.read(), '\n')
     return matrix
 

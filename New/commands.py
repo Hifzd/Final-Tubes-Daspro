@@ -7,6 +7,9 @@ import F06
 import F07
 import F08
 import F09
+import F10
+import F11
+import F14
 import global_dat
 
 def run(masukan):
@@ -60,3 +63,18 @@ def run(masukan):
             F09.laporanjin()
         else:
             print('Laporan jin hanya dapat diakses oleh akun Bandung Bondowoso.')
+    
+    elif masukan == 'laporancandi':
+        if global_dat.current_user[2] == 'bandung_bondowoso':
+            F10.laporancandi()
+        else:
+            print('Laporan Candi hanya dapat diakses oleh akun Bandung Bondowoso.')
+
+    elif masukan == 'hancurkancandi':
+        if global_dat.current_user[2] == 'roro_jonggrang':
+            F11.hancurkancandi()
+        else:
+            print('Hanya Roro Jonggrang yang dapat menghancurkan candi!')
+
+    elif masukan == 'save':
+        F14.save()

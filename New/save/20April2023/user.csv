@@ -1,0 +1,17 @@
+username;password;role
+Bondowoso;cintaroro;bandung_bondowoso
+Roro;gasukabondo;roro_jonggrang
+jin1;jinsatu;jin_pengumpul
+jin_kuli;kulisejati;jin_pembangun
+jintomang;tomang;jin_pembangun
+masrusdi;rusdimanis;jin_pembangun
+johndoe;password123;jin_pembangun
+janedoe;hello123;jin_pengumpul
+testuser1;testing123;jin_pembangun
+testuser2;securepass;jin_pengumpul
+datauser1;data123;jin_pembangun
+datauser2;datapass;jin_pengumpul
+myuser1;mypassword;jin_pembangun
+myuser2;mypass123;jin_pengumpul
+adminuser1;adminpass;jin_pembangun
+adminuser2;admin123;jin_pengumpul

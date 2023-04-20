@@ -1,4 +1,6 @@
+import F12
 import F13
+import F16
 import argparse
 import commands
 import global_dat
@@ -15,8 +17,11 @@ if isFoldr_exist:
 while isFoldr_exist:
     masukan = input(">>> ")
     if masukan == 'exit':
+        F16.ext()
+        break
+    elif masukan == 'ayamberkokok' and global_dat.current_user[0] == 'Roro':
+        F13.ayamberkokok()
         break
     else:
         commands.run(masukan)
         print()
-        print(global_dat.candi)
