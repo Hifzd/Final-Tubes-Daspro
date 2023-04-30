@@ -14,6 +14,13 @@ import F15
 import global_dat
 
 def run(masukan):
+    # SPESIFIKASI
+    # Mengarahkan program ke fitur/subprogram berdasarkan masukan dari masukan user
+
+    # KAMUS LOKAL
+    # masukan : str
+
+    # ALGORITMA
     if masukan == 'login':
         F01.login()
 
@@ -56,5 +63,5 @@ def run(masukan):
     elif masukan == 'help':
         F15.help(global_dat.current_user[2])
 
-    else:
+    else: # bila masukan user belum sesuai
         print('Command tidak ditemukan\nSilahkan ketik "help" untuk melihat command yang bisa digunakan')
