@@ -1,5 +1,12 @@
 def help(user):
-    if user == '':
+    # SPESIFIKASI
+    # Mengeluarkan pesan bantuan yang menyesuaikan dengan role dari user
+
+    # KAMUS LOKAL
+    # user : str
+
+    # ALGORITMA
+    if user == '': #Bila belum ada user yang login dalam permainan
         print("1. login\n   Untuk masuk menggunakan akun")
         print("2. exit\n   Untuk keluar dari program dan kembali ke terminal")
         print("3. help\n   Untuk melihat daftar command")
