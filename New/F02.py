@@ -1,6 +1,14 @@
 import global_dat
 
 def logout():
+    # SPRESIFIKASI
+    # Akan memeriksa apakah user sudah login, bila iya, maka nilai current_user yang- 
+    # menyimpan data user yang telah login di reset(menjadi kosong)
+
+    # KKAMUS LOKAL
+    # tidak terdapat variabel lokal
+
+    # ALGORITMA
     global global_dat
     if global_dat.current_user[0] == '':
         print("Logout gagal")

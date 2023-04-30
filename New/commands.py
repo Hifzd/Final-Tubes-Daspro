@@ -10,6 +10,7 @@ import F09
 import F10
 import F11
 import F14
+import F15
 import global_dat
 
 def run(masukan):
@@ -20,61 +21,40 @@ def run(masukan):
         F02.logout()
 
     elif masukan == 'summonjin':
-        if global_dat.current_user[2] == 'bandung_bondowoso':
-            F03.summonjin()
-        else:
-            print('Hanya Bondowoso yang bisa memanggil para jin!')
+        F03.summonjin()
 
     elif masukan == 'hapusjin':
-        if global_dat.current_user[2] == 'bandung_bondowoso':
-            F04.hapusjin()
-        else:
-            print('Hanya Bondowoso yang bisa melenyapkan para jin!')
+        F04.hapusjin()
 
     elif masukan == 'ubahjin':
-        if global_dat.current_user[2] == 'bandung_bondowoso':
-            F05.ubahjin()
-        else:
-            print('Hanya Bondowoso yang bisa merubah para jin!')
+        F05.ubahjin()
 
     elif masukan == 'bangun':
-        if global_dat.current_user[2] == 'jin_pembangun':
-            F06.bangun('single', global_dat.current_user[0],'')
-        else:
-            print('Hanya jin pembangun yang bisa membangun candi')
+        F06.bangun('single', global_dat.current_user[2],'')
 
     elif masukan == 'kumpul':
-        if global_dat.current_user[2] == 'jin_pengumpul':
-            F07.kumpul()
-        else:
-            print('Hanya jin pembangun yang bisa membangun candi')
+        F07.kumpul()
 
-    elif masukan == 'batchbangun' or masukan == 'batchkumpul':
-        if global_dat.current_user[2] == 'bandung_bondowoso':
-            if masukan == 'batchkumpul':
-                F08.batchkumpul()
-            else:
-                F08.batchbangun()
-        else:
-            print('Hanya sang Bondowoso yang bisa mengerahkan seluruh jin pengumpul/pembangun!')
+    elif masukan == 'batchbangun':
+        F08.batchbangun()
     
+    elif masukan == 'batchkumpul':
+        F08.batchkumpul()
+
     elif masukan == 'laporanjin':
-        if global_dat.current_user[2] == 'bandung_bondowoso':
-            F09.laporanjin()
-        else:
-            print('Laporan jin hanya dapat diakses oleh akun Bandung Bondowoso.')
+        F09.laporanjin()
     
     elif masukan == 'laporancandi':
-        if global_dat.current_user[2] == 'bandung_bondowoso':
-            F10.laporancandi()
-        else:
-            print('Laporan Candi hanya dapat diakses oleh akun Bandung Bondowoso.')
+        F10.laporancandi()
 
     elif masukan == 'hancurkancandi':
-        if global_dat.current_user[2] == 'roro_jonggrang':
-            F11.hancurkancandi()
-        else:
-            print('Hanya Roro Jonggrang yang dapat menghancurkan candi!')
+        F11.hancurkancandi()
 
     elif masukan == 'save':
         F14.save()
+    
+    elif masukan == 'help':
+        F15.help(global_dat.current_user[2])
+
+    else:
+        print('Command tidak ditemukan\nSilahkan ketik "help" untuk melihat command yang bisa digunakan')

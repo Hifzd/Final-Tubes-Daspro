@@ -20,7 +20,7 @@ while isFoldr_exist:
         F16.ext()
         break
     elif masukan == 'ayamberkokok' and global_dat.current_user[0] == 'Roro':
-        F13.ayamberkokok()
+        F12.ayamberkokok()
         break
     else:
         commands.run(masukan)
