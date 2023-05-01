@@ -23,7 +23,7 @@ def hapusjin() :
         if bnykjin == 0 : # Belum terdapat jin
             print("Tidak ada jin yang bisa dihilangkan")
         else : # bnykjin > 0 
-            usrn = input('Masukkan usrn jin : ')
+            usrn = input('Masukkan username jin : ')
             # Memeriksa apakah username dari jin yang dihilangkan ada pada database users
             for i in range(pjglist(global_dat.users)):
                 if global_dat.users[i][0] == usrn:

@@ -12,9 +12,9 @@ def jinless100(users, golongan):
     # Algoritma
     count = hitungjin(users, golongan)
     #fungsi primitif hitungjin akan menghitung jumlah jin dengan golongan tertentu dalam matriks users
-    if count <= 100:
+    if count < 100:
         return True
-    elif count > 100:
+    else:
         print('Jumlah Jin telah maksimal! (100 jin). Bandung tidak dapat men-summon lebih dari itu')
         return False
 

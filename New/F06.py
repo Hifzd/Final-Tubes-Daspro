@@ -29,7 +29,7 @@ def bangun(tipe, builder, data) :
             
         else:
             # Meriksa apakah bahan yang tersedia mencukupi kebutuhan pembangunan candi
-            stock = lobal_dat.bahan_bangunan
+            stock = global_dat.bahan_bangunan
             # Keterangan: baris 0 berupa judul, baris 1 data pasir, baris 2 data batu,  baris 3 data pasir
             # kolom 0 nama bahan, kolom 1 deskripsi, kolom 2 jumlah bahan
             if perluair <= int(stock[3][2]) and perlubatu <= int(stock[2][2]) and perlupasir <= int(stock[1][2]) :

@@ -31,6 +31,7 @@ def batchkumpul() :
 
         else:
             # Akan dilakukan 'proses' pengumpulan bahan sebanyak jumlah jin pengumpul yang ada
+            print(f'Mengerahkan {count} jin untuk mengumpulkan bahan.')
             for i in range(count) :
                 jumlahair += gather()
                 jumlahpasir += gather()
@@ -42,7 +43,7 @@ def batchkumpul() :
             global_dat.bahan_bangunan[1][2] = int(global_dat.bahan_bangunan[1][2])+jumlahpasir
             global_dat.bahan_bangunan[2][2] = int(global_dat.bahan_bangunan[2][2])+jumlahbatu
             global_dat.bahan_bangunan[3][2] = int(global_dat.bahan_bangunan[3][2])+jumlahair
-            print("Jin menemukan total "+str(jumlahpasir)+" pasir "+str(jumlahbatu)+" batu "+str(jumlahair)+" air ")
+            print("Jin menemukan total "+str(jumlahpasir)+" pasir, "+str(jumlahbatu)+" batu, "+str(jumlahair)+" air ")
 
 def batchbangun() :
     # SPESIFIKASI
@@ -100,7 +101,7 @@ def batchbangun() :
                 totalBahan[1] += int(newCandis[i][3])
                 totalBahan[2] += int(newCandis[i][4])
 
-            print(f'Mengarahkan {count} jin untuk memanbangun candi dengan total bahan:')
+            print(f'Mengerahkan {count} jin untuk membangun candi dengan total bahan:')
             print(f'{totalBahan[0]} pasir, {totalBahan[1]} batu, {totalBahan[2]} air')
 
             # Memeriksa apakah stok bahan mencukupi pembangunan seluruh candi dalam newCandis
@@ -117,11 +118,11 @@ def batchbangun() :
                 global_dat.bahan_bangunan[1][2] = lebihPasir
                 global_dat.bahan_bangunan[2][2] = lebihBatu
                 global_dat.bahan_bangunan[3][2] = lebihAir
-                print(f'Para jin berhasil membangun {pjglist(newCandis)} candi')
+                print(f'Para jin berhasil membangun total {pjglist(newCandis)} candi.')
                 
             else:   # Salah satu, beberapa, atau semua bahan kurang mencukupi
-                print('Para jin gagal membangun candi karena kekurangan bahan!')
-                print('Kurang',end='')
+                print('Bangun gagal.', end=' ')
+                print('kurang',end='')
                 # Akan ditampilkan bahan bahan yang kurang dan jumlahnya 
                 # (bahan yang kurang akan bernilai negatif)
                 if lebihPasir < 0:
